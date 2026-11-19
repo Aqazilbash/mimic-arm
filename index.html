@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My GitHub Website</title>
+<meta charset="utf-8">
+<title>Mimic Arm: Milestone 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#ffffff;--text:#000000;--line:#cccccc;--link:#1a55c8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#181818;--text:#eeeeee;--line:#444444;--link:#7fa6ff}}
+:root[data-theme="dark"]{--bg:#181818;--text:#eeeeee;--line:#444444;--link:#7fa6ff}
+body{background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.6;max-width:700px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:2rem;margin:0 0 4px}
+h2{font-size:1.3rem;margin:32px 0 2px}
+p{margin:4px 0 8px}
+.goal{font-style:italic}
+textarea{width:100%;min-height:120px;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);padding:8px;box-sizing:border-box}
+textarea:focus-visible{outline:2px solid var(--link)}
+hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+</style>
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <p>Welcome to my new website.</p>
+<h1>Mimic Arm: Milestone 1</h1>
+<p>Team: Alex Qazilbash, Pepper Wang, Liam Brennan, Ophelia Lonzo, Maddy Fahey</p>
+<hr>
+
+<h2>Research</h2>
+<p class="goal">Put research here</p>
+
+<h2>Libraries identified</h2>
+<p class="goal">Put libraries here</p>
+
+<h2>Camera system plan</h2>
+<p class="goal">put the plan here</p>
+
+<h2>Robot arm secured</h2>
+<p class="goal">show some evidence of looking on the arm and put documentation and stuff we have from it</p>
+
+<h2>Pseudocode and code structure</h2>
+<p class="goal">show our psuedocode and planning</p>
+
+<h2>Arm tracking and IK progress</h2>
+<p class="goal">show some arm tracking and inverse kinematics progress</p>
+
+<script>
+document.querySelectorAll("textarea").forEach(function(t){
+  try{t.value=localStorage.getItem("m1-"+t.id)||""}catch(e){}
+  t.addEventListener("input",function(){try{localStorage.setItem("m1-"+t.id,t.value)}catch(e){}});
+});
+</script>
 </body>
 </html>
